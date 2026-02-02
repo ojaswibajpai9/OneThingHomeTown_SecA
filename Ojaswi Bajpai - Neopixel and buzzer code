@@ -1,0 +1,107 @@
+from machine import Pin 
+import time
+import neopixel
+import random
+
+my_np = neopixel.NeoPixel(Pin(4), 16)
+pb = Pin(5,Pin.IN,Pin.PULL_UP)
+buzz = Pin(12, Pin.OUT)
+
+#name[index] = (R,G,B) # For red (255,0,0) For Green (0,255,0) For Blue
+
+
+while True :
+    if pb.value() == 0:
+      for k in range(0,5):
+          my_np[k] = (255,0,255)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.2)
+      for k in range(9,13):
+          my_np[k] = (0,300,400)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.2)
+      for k in range(13,16):
+          my_np[k] = (255,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.2)
+      for k in range(5,9):
+          my_np[k] = (255,255,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.2)
+      for k in range(13,16):
+          my_np[k] = (255,255,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(5,9):
+          my_np[k] = (255,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(9,13):
+          my_np[k] = (0,140,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(0,5,2):
+          my_np[k] = (0,300,400)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(0,16):
+          my_np[k] = (0,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(0,4):
+          my_np[k] = (255,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(4,9):
+          my_np[k] = (255,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(9,14):
+          my_np[k] = (255,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+      for k in range(14,16):
+          my_np[k] = (255,0,0)
+          my_np.write()
+          buzz.on()
+          time.sleep(0.05)
+          buzz.off()
+          time.sleep(0.1)
+          
+        
